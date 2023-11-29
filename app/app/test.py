@@ -19,4 +19,3 @@ class CalcTest(SimpleTestCase):
         """Test substraction of two numbers"""
         result = calc.subtract(5, 11)
         self.assertEqual(result, 6)
-
