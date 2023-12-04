@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    'core',
+    'rest_framework',  # Django REST framework
+    'rest_framework.authtoken',  # Django REST framework token authentication, it's built-in DRF but needs to be added to the INSTALLED_APPS separately, to add support for token authentication
+    'drf_spectacular',  # Django REST framework Spectacular
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +132,12 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Define the custom user model
+AUTH_USER_MODEL = 'core.User'
+
+# Django REST framework settings
+# Configure to use the openapi schema generator
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
