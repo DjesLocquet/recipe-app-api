@@ -34,4 +34,6 @@ urlpatterns = [
 
     # include the urls from the user app
     path('api/user/', include('user.urls')),
+    # include the urls from the recipe app
+    path('api/recipe/', include('recipe.urls')),
 ]
