@@ -36,4 +36,5 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('email', 'password1', 'password2', 'name', 'is_active', 'is_staff', 'is_superuser', )}),)
 
 
-admin.site.register(models.User, UserAdmin)
+admin.site.register(models.User, UserAdmin)     # Uses a custom UserAdmin class
+admin.site.register(models.Recipe)              # Uses the default Django Model so no need to pass a class
