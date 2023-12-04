@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',  # Django REST framework token authentication, it's built-in DRF but needs to be added to the INSTALLED_APPS separately, to add support for token authentication
     'drf_spectacular',  # Django REST framework Spectacular
     'user',
+    'recipe',
 ]
 
 MIDDLEWARE = [
